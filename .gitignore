@@ -1,14 +1,9 @@
-build.gradle
-gradlew
-gradlew.bat
-settings.gradle
 HELP.md
-.gradle/
-.gradle/wrapper/
+.gradle
 build/
+!gradle/wrapper/gradle-wrapper.jar
 !**/src/main/**/build/
 !**/src/test/**/build/
-
 
 ### STS ###
 .apt_generated
@@ -24,6 +19,7 @@ bin/
 
 ### IntelliJ IDEA ###
 .idea
+.idea/*
 *.iws
 *.iml
 *.ipr
