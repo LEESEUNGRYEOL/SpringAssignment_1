@@ -34,6 +34,7 @@ public class BlogController {
         return blogService.getBlogs(id);
     }
 
+
     // 요구사항4. 선택한 게시글 수정 API (PUT)
     @PutMapping("/blogs/{id}")
     public BlogResponseDto updateBlog(@PathVariable Long id, @RequestBody BlogRequestDto requestDto) {
