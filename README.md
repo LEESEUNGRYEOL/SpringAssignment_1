@@ -2,7 +2,8 @@
 
 스프링 1주차 개인과제
 ## Use-case
-![IMG_37B3F5BF801E-1.jpeg](..%2F..%2FDownloads%2FIMG_37B3F5BF801E-1.jpeg)
+![IMG_37B3F5BF801E-1](https://user-images.githubusercontent.com/96409909/216916410-da692ffe-7531-487b-9b45-584e6543d4df.jpeg)
+
 ## 요구사항
 
 1. 전체 게시글 목록 조회 API
@@ -56,6 +57,28 @@
 #### 5. API 명세서 작성 가이드라인을 검색하여 직접 작성한 API 명세서와 비교해보세요!
 
 - 비교완료 하였습니다.
+
+## 실행결과
+#### [POST 결과]
+<img width="1184" alt="스크린샷 2023-02-06 오후 3 19 58" src="https://user-images.githubusercontent.com/96409909/216916606-cd3daa49-5960-4d0d-88b8-0a90d54c561e.png">
+<img width="666" alt="스크린샷 2023-02-06 오후 3 20 41" src="https://user-images.githubusercontent.com/96409909/216916499-de31cc7a-ef51-45a3-af61-60342a0259f0.png">
+
+#### [GET 결과]
+<img width="1181" alt="스크린샷 2023-02-06 오후 3 21 16" src="https://user-images.githubusercontent.com/96409909/216916930-9032ffdb-3ee3-461f-8f50-90fb8ed2035f.png">
+<img width="1185" alt="스크린샷 2023-02-06 오후 3 21 32" src="https://user-images.githubusercontent.com/96409909/216916879-fcb58f56-2f22-43e2-a08e-cdbd2373b0de.png">
+
+#### [PUT 결과]
+<img width="1185" alt="스크린샷 2023-02-06 오후 3 22 05" src="https://user-images.githubusercontent.com/96409909/216916839-96240e29-3746-4526-9f2d-6078192e6cb0.png">
+
+#### [DELETE 결과]
+<img width="1185" alt="스크린샷 2023-02-06 오후 3 22 39" src="https://user-images.githubusercontent.com/96409909/216916745-6a660ccb-564f-4a29-bce7-43f2f582339c.png">
+
+#### [총 진행 결과 DB]
+<img width="693" alt="스크린샷 2023-02-06 오후 3 23 02" src="https://user-images.githubusercontent.com/96409909/216916655-98a72b88-f70c-4628-87e0-8f0d83fd7481.png">
+
+
+
+
 
 ## 진행상황
 
