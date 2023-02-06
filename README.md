@@ -1,7 +1,8 @@
 # SpringAssignment_1
 
 스프링 1주차 개인과제
-
+## Use-case
+![IMG_37B3F5BF801E-1.jpeg](..%2F..%2FDownloads%2FIMG_37B3F5BF801E-1.jpeg)
 ## 요구사항
 
 1. 전체 게시글 목록 조회 API
@@ -27,15 +28,15 @@
 | GET    | /api/blogs    | -                                                                                                        | {{ "createdAt": "2022-07-25T12:43:01.226062”,"modifiedAt": "2022-07-25T12:43:01.226062”,"id": 1,"title": "title2","content": "content2","author": "author2"},{"createdAt": "2022-07-25T12:43:01.226062”,"modifiedAt": "2022-07-25T12:43:01.226062”,"id": 2,"title": "title","content": "content","author": "author"}} |
 | GET    | /api/blogs/{id} | -                                                                                                        | {"createdAt": "2022-07-25T12:43:01.226062”,"modifiedAt": "2022-07-25T12:43:01.226062”,"id": 1,"title": "title2","content": "content2","author": "author2"}                                                                                                                                                            |
 | POST   | /api/blogs     | {"title" : "title"   ,     "content" : "content",        "author" : "author",  "password": "password"  } | {"createdAt": "2022-07-25T12:43:01.226062”,"modifiedAt": "2022-07-25T12:43:01.226062”,"id": 1,"title": "title","content": "content","author": "author"}                                                                                                                                                               |
-| PUT    | /api/blogs/{id} | {"title" : "title"   ,     "content" : "content",        "author" : "author",  "password": "password"  }| {"createdAt": "2022-07-25T12:43:01.226062”,"modifiedAt": "2022-07-25T12:43:01.226062”,"id": 1,"title": "title2","content": "content2","author": "author2"}                                                                                                                                                            |
-| DELETE | /api/blogs/{id} | {"title" : "title"   ,     "content" : "content",        "author" : "author",  "password": "password"  }                                                                           | {"message": "성공" }                                                                                                                                                                                                                                                                                                    |
+| PUT    | /api/blogs/{id} | {  "content" : "content",    "password": "password"  } | {"createdAt": "2022-07-25T12:43:01.226062”,"modifiedAt": "2022-07-25T12:43:01.226062”,"id": 1,"title": "title2","content": "content2","author": "author2"}                                                                                                                                                            |
+| DELETE | /api/blogs/{id} | {"password": "password"  }                                                                               | {"message": "성공" }                                                                                                                                                                                                                                                                                                    |
 
 
 
 ## 질문사항
 #### 1. 수정, 삭제 API의 request를 어떤 방식으로 사용하셨나요? (param, query, body)
 
-- 수정및 삭제 API 에서는 param 방식으로 request를 받아서 사용했습니다.
+- 수정및 삭제 API 에서는 param 방식으로 id를 받아서 사용했으며, 제목과 내용 비밀번호 등과 같은 내용은 RequestBody에서 Json 형식으로 받아서 사용했습니다.
 #### 2. 어떤 상황에 어떤 방식의 request를 써야하나요?
 
 - GET : GET Method 와 같은 경우에는 보통 받아오는 경우 사용이 됨으로, 만약 특정 값을 가져오려면 Request body 부분은 비워두는 param 방식을 사용해야 할 것 같습니다.
@@ -46,15 +47,17 @@
 
 #### 3. RESTful한 API를 설계했나요? 어떤 부분이 그런가요? 어떤 부분이 그렇지 않나요?
 
-- GET, POST,  DELETE,PUT 전부 설계했으므로, 잘 설계한 RESTful 한 API 인 것 같다.
+- GET, POST, DELETE, PUT 전부 설계했으므로, 잘 설계한 RESTful 한 API 인 것 같습니다.
 #### 4. 적절한 관심사 분리를 적용하였나요? (Controller, Repository, Service)
 
 - 잘 분리해서 적용을 하였다. Controller 부분 (view 와 server 간의 소통), Repo(데이터) 부분 , service 부분 (method) 을 잘 나누어서 작업했고
-- 이를 client에게 전달할때도 DTO를 통해서 잘 전달하는 작업을 진행하였다.
+- 이를 client에게 전달할때도 DTO를 통해서 잘 전달하는 작업을 진행하였습니다.
 
 #### 5. API 명세서 작성 가이드라인을 검색하여 직접 작성한 API 명세서와 비교해보세요!
 
+- 비교완료 하였습니다.
 
 ## 진행상황
 
-- 22.02.05 : DELETE 까지 작성은 완료했지만, 조금 찜찜한 부분이 많다. 특히나 DELETE 부분에서 새로운 DTO를 만들어야 하는 것 때문에 시간이 걸렸는데, 만약 원래 문제의도대로 한다면 requestDTO도 삭제 부분에서는 새로 만들어야 하는가?
+- 23.02.05 : DELETE 까지 작성은 완료했지만, 조금 찜찜한 부분이 많다. 특히나 DELETE 부분에서 새로운 DTO를 만들어야 하는 것 때문에 시간이 걸렸는데, 만약 원래 문제의도대로 한다면 requestDTO도 삭제 부분에서는 새로 만들어야 하는가?
+- 23.02.06 : 일단 requestDto 에서 보내주는 내용 (ReqeustBody) 에서의 수정부분이 있었다. 위의 고민했던 내용들은 사실상 Blog entity 에서의 메서드에서의 오류만 잘 해결하면 해결되는 문제였다. 이제는 다른 request 형식으로 바꿔서 받아보는 연습을 해봐야겠다.
