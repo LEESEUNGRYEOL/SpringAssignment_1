@@ -13,6 +13,9 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.ArrayList;
 import java.util.List;
 
+// Spring Framework Annotation
+// 서비스 계층에서의 비즈니스 로직을 구현할 클래스에 붙여서 사용.
+// @Service 가 붙은 클래스를 빈으로 자동 등록해서 다른 클래스에서 이 클래스의 기능을 사용할 수 있도록 함.
 @Service
 @RequiredArgsConstructor
 public class BlogService {
@@ -20,7 +23,10 @@ public class BlogService {
 
     // 요구사항1. 전체 게시글 목록 조회
     // (이때 RSP 로 전달해야하는 것이 List 가 아닌, DTO 로 전달해야함.)
+    // @Transactional -> 다음 어노테이션이 적용된 메서드에서 수행되는 모든 작업은 하나의 트랜잭션 안에서 수행
+    // 즉 한 메서드에서 수행되는 여러 작업이 실패할 경우 이전에 수행된 모든 작업이 롤백되어서 원상태로 돌아간다.
     @Transactional(readOnly = true)
+
     public List<BlogResponseDto> getBlogs() {
         List <Blog> blogList = blogRepository.findAllByOrderByCreatedAtAsc();
         List <BlogResponseDto> blogResponseDtoList = new ArrayList<>();

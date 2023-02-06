@@ -10,11 +10,14 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 
-@RestController
-@RequiredArgsConstructor
-@RequestMapping("/api")
+@RestController // SpringFrameWork에서 제공하는 어노테이션, RESTAPI 컨트롤러 클래스에 사용됨. @ResponseBody 어노테이션이 적용된 메서드를 자동으로 실행한 결과를 HTTP 응답으로 반환.
+@RequiredArgsConstructor // 클래스의 final 필드와 @NonNull 필드를 포함하는 생성자를 자동으로 생성
+@RequestMapping("/api") // SpringMVC의 주요 어노테이션, Controller method 가 어떤 url 요청에 매핑되어야 하는지 지정.
 public class BlogController {
     private final BlogService blogService;
+
+    // 1. @PathVariable :URL 경로에서 추출한 변수 값을 메서드의 파라미터로 전달할 때 사용됨.
+    // 2.
 
     // 요구사항1. 전체 게시글 목록 조회 API (GET)
     @GetMapping("/blogs")
